@@ -14,7 +14,7 @@ $(document).ready(function() {
     var phraseArray = phrase.split("");
     console.log(phraseArray);
 
-    var result;
+    var result; 
       if (isNaN(phrase) === false) {
         result = phrase;
       } else if (["a", "e", "i", "o", "u"].includes(phraseArray[0])) {
@@ -25,8 +25,7 @@ $(document).ready(function() {
           return element;
         })
         var removed = clonePhraseArray.splice(0, 1);
-        console.log(removed);
-        result = removed + phraseArray[0];
+        result = clonePhraseArray.join("") + removed + "ay";
         console.log(result);
       }
 
