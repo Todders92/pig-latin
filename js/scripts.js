@@ -12,8 +12,12 @@ $(document).ready(function() {
     console.log(phrase);
 
     var result;
-      if (parseInt(phrase) != "NaN") {
+      if (isNaN(phrase) === false) {
         result = phrase;
+      } else if (phrase === "a" || "i" || "e"|| "u" || "o") {
+        result = phrase + "ay";
+      } else if (phrase.includes("a" || "i" || "e"|| "u" || "o", 0)) {
+        result = phrase + "ay";
       }
 
     $("#piglatinoutput").show();
